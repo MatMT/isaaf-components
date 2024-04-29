@@ -1,0 +1,57 @@
+---
+const { title, titleColor } = Astro.props;
+---
+
+<header class="contentHeader">
+  <h1 class="uppercase flex flex-wrap items-center justify-center gap-4">
+    {title}<span class="text-gradient inline">{titleColor}</span>
+  </h1>
+
+  <p class="instructions">
+    <slot />
+  </p>
+
+  <br />
+  <hr class="my-6" />
+  <br />
+</header>
+
+<style is:global>
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin: 1em 0;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+
+  .instructions {
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+</style>

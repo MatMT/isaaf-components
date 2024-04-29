@@ -1,0 +1,158 @@
+---
+// Recibe las propiedades del componente para el título, la descripción y el código HTML.
+const { id, description, descripHTMl, descripBlade, htmlCode, bladeCode } =
+  Astro.props;
+---
+
+<div
+  id={id}
+  class="displayCode p-6 mx-auto bg-white rounded-xl shadow-md space-y-4"
+>
+  <!-- Container for the buttons -->
+  <nav
+    class="flex flex-wrap text-gray-800 justify-between gap-2 bg-gray-100 p-4"
+  >
+    <!-- Monitor button -->
+    <div class="flex gap-3 justify-center align-center">
+      <button
+        class="p-2 bg-white rounded shadow flex items-center justify-center hover:bg-gray-50"
+        id={`view-desktop-${id}`}
+      >
+        <span class="material-icons">Escritorio</span>
+      </button>
+
+      <button
+        class="hidden p-2 bg-white rounded shadow items-center justify-center hover:bg-gray-50"
+        id="view-responsive"
+      >
+        <span class="material-icons">Responsive</span>
+      </button>
+    </div>
+
+    <!-- HTML button -->
+    <div class="flex gap-3 justify-center align-center">
+      <button
+        class={`previewcode-${id} p-2 bg-white rounded shadow flex items-center justify-center hover:bg-gray-50`}
+        data-code="html"
+      >
+        HTML
+      </button>
+
+      <!-- React button -->
+      <button
+        class={`previewcode-${id} p-2 bg-white rounded shadow flex items-center justify-center hover:bg-gray-50`}
+        data-code="blade"
+      >
+        Blade
+      </button>
+
+      <!-- Copy button -->
+      <button
+        class="p-2 bg-white rounded shadow flex items-center justify-center hover:bg-gray-50"
+        id={`copy-${id}`}
+      >
+        <span class="">Copiar</span>
+      </button>
+    </div>
+  </nav>
+
+  <div
+    id={`desc-html-${id}`}
+    class="text-gray-800"
+    data-descripHtml={descripHTMl}
+    data-descriptBlade={descripBlade}
+  >
+  </div>
+
+  <div id={`divPreview-${id}`}>
+    <!-- Astro escapa HTML y lo imprime en el DOm -->
+    <div set:html={htmlCode} />
+  </div>
+
+  <div
+    id={`divCode-${id}`}
+    class="hidden bg-gray-800 p-2 rounded overflow-auto"
+  >
+    <pre><code id={`code-${id}`} data-html={htmlCode} data-blade={bladeCode}>{htmlCode}</code></pre>
+  </div>
+</div>
+
+<script>
+  (() => {
+    // Selecciona los elementos del DOM
+    const displays = document.querySelectorAll(".displayCode");
+
+    // Eventos ========================================
+    displays.forEach((display) => {
+      let id = display.id;
+
+      display.addEventListener("click", (e) => {
+        let elemento = e.target;
+
+        // Selección de los Botones
+        let showDesktop = document.getElementById(`view-desktop-${id}`);
+        let divPreview = document.getElementById(`divPreview-${id}`);
+        let divCode = document.getElementById(`divCode-${id}`);
+        let copyBtn = document.getElementById(`copy-${id}`);
+
+        // Definición de los códigos
+
+        let codeHtml = escapeHTML(
+          divCode.querySelector("code").getAttribute("data-html")
+        );
+        let codeBlade = escapeHTML(
+          divCode.querySelector("code").getAttribute("data-blade")
+        );
+
+        // Mostrar Preview
+        showDesktop.addEventListener("click", () => {
+          if (divPreview.classList.contains("hidden"))
+            divPreview.classList.remove("hidden");
+
+          if (!divCode.classList.contains("hidden")) {
+            divCode.classList.add("hidden");
+          }
+        });
+
+        // Mostrar tipo de código
+        if (elemento.classList.contains(`previewcode-${id}`)) {
+          let typeCode = elemento.getAttribute("data-code");
+          let codeElement = divCode.querySelector(`#code-${id}`);
+
+          let descripHtml = document.getElementById(`desc-html-${id}`);
+
+          console.log(descripHtml.getAttribute("data-descriptBlade"));
+
+          if (typeCode == "html") {
+            codeElement.innerHTML = codeHtml;
+            descripHtml.innerHTML =
+              descripHtml.getAttribute("data-descripHtml");
+          } else if (typeCode == "blade") {
+            codeElement.innerHTML = codeBlade;
+            descripHtml.innerHTML =
+              descripHtml.getAttribute("data-descriptBlade");
+          }
+
+          divPreview.classList.add("hidden");
+          divCode.classList.remove("hidden");
+        }
+
+        // Designar el codigo a copiar
+        copyBtn.addEventListener("click", () => {
+          let code = divCode.querySelector("code").textContent;
+          navigator.clipboard.writeText(code);
+        });
+      });
+    });
+
+    // Helper ========================================
+    function escapeHTML(html: string) {
+      return html
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+  })();
+</script>

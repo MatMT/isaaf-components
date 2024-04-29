@@ -1,0 +1,19 @@
+---
+let { href, title } = Astro.props;
+
+const currentUrl = new URL(Astro.request.url); //  URL Actual
+const isActive = href === currentUrl.pathname; // Comprobamos si el enlace está activo
+
+// Clases base para el enlace
+const baseClasses =
+  "px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700";
+
+// Clases adicionales para cuando el enlace está activo
+const activeClasses = isActive
+  ? "text-white bg-purple-600"
+  : "text-purple-300 bg-transparent";
+---
+
+<a href={href} class={`${baseClasses} ${activeClasses}`}>
+  {title}
+</a>

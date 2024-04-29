@@ -1,51 +1,120 @@
 ---
+import NavElement from "../components/navElement.astro";
+
 interface Props {
-	title: string;
+  title: string;
+  navbar: boolean;
 }
 
-const { title } = Astro.props;
+const { title, navbar } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="stylesheet" href="/styles/isaaf.css" />
+    <title>Componentes | {title}</title>
+  </head>
+  <body>
+    {
+      navbar && (
+        <nav class="bg-gray-800">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+              <div class="flex items-center justify-between w-full">
+                <div class="flex-shrink-0">
+                  <a href="/">
+                    <h1 class="text-lg md:text-2xl font-bold text-purple-300">
+                      COMPONENTES
+                    </h1>
+                  </a>
+                </div>
+                <div class="hidden md:block">
+                  <div class="ml-10 flex items-baseline space-x-4">
+                    <NavElement href="/categorias/botones" title="Botones" />
+
+                    <NavElement
+                      href="/categorias/contenedores"
+                      title="Contenedores"
+                    />
+
+                    <NavElement
+                      href="/categorias/formularios"
+                      title="Formularios"
+                    />
+
+                    <NavElement href="/categorias/tablas" title="Tablas" />
+
+                    <NavElement
+                      href="/categorias/navegacion"
+                      title="Navegación"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      )
+    }
+
+    <slot />
+  </body>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+    background-size: 224px;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+
+  body {
+    margin: auto;
+    padding: 1rem;
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .contentHeader {
+    margin: 0 auto;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+  }
+
+  .content {
+    margin: 0 auto;
+    width: 80%;
+    min-width: 800px;
+    max-width: 1200px;
+  }
 </style>

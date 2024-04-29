@@ -1,0 +1,86 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeaderPage from "../../components/HeaderPage.astro";
+import CodeDisplay from "../../components/CodeDisplay.astro";
+import CodeSection from "../../components/CodeSection.astro";
+
+const htmlExample = `
+<input type="text" id="disabled-input" aria-label="disabled input" class="mb-6 bg-gray-100 border ...">
+<input type="text" id="disabled-input-2" aria-label="disabled input 2" class="bg-gray-100 border ...">
+`;
+---
+
+<Layout title="Navegación" navbar={true}>
+  <HeaderPage title="Componentes" titleColor="Botones">
+    En esta página encontrarás diferentes tipos de botones para diversas
+    acciones o usos.
+  </HeaderPage>
+
+  <main class="content">
+    <div class="flex flex-col gap-8">
+      <CodeSection title="Botones Sólidos">
+        <CodeDisplay
+          id="solid-buttons"
+          title="Disabled State"
+          descripHTMl="Estático  | <strong>btn-base ...</strong>"
+          descripBlade="Dinámico | <strong>name*</strong> | [subtmit, reset, successful, delete]"
+          htmlCode={`<button class="btn-base submit">submit</button>
+<button class="btn-base reset">reset</button>
+<button class="btn-base successful"><i class="fi fi-br-check mx-2"></i>succesful</button>
+<button class="btn-base delete"><i class="fi fi-br-trash-xmark mx-2"></i>delete</button>
+            `}
+          bladeCode={`<x-btn name="btn-ejemplo">Texto</x-btn> `}
+        />
+      </CodeSection>
+
+      <CodeSection title="Botones Líneales">
+        <CodeDisplay
+          id="line-buttons"
+          title="Disabled State"
+          descripHTMl="btn-base ...-line"
+          descripBlade=""
+          htmlCode={`<button class="btn-base submit-line">submit-line</button>
+<button class="btn-base reset-line">reset-line</button>
+<button class="btn-base successful-line"><i class="fi fi-br-check mx-2"></i>succesful-line</button>
+<button class="btn-base delete-line"><i class="fi fi-br-trash-xmark mx-2"></i>delete-line</button>
+`}
+          bladeCode={`Pendiente`}
+        />
+      </CodeSection>
+
+      <CodeSection title="Botones Especiales">
+        <CodeDisplay
+          id="especial-buttons"
+          title="Disabled State"
+          descripHTMl="btn-spc ...."
+          descripBlade=""
+          htmlCode={`<button class="btn-spc edit-sm"><i class="fi fi-rr-pencil"></i><span>edit-sm</span></button>
+<button class="btn-spc delete-sm"><i class="fi fi-rr-trash-xmark"></i><span>edit-sm</span></button>
+<button class="btn-spc normal-sm"><i class="fi fi-rr-home"></i></i><span>Home</span></button>
+`}
+          bladeCode={`Pendiente`}
+        />
+      </CodeSection>
+
+      <CodeSection title="Botones Responsivos">
+        <CodeDisplay
+          id="responsive-buttons"
+          title="Disabled State"
+          descripHTMl="btn-spc ...."
+          descripBlade=""
+          htmlCode={`
+<button class="btn-spc approved">approved</button>
+<button class="btn-spc inprogress">progress</button>
+<button class="btn-spc danger">Inactivo</button>
+`}
+          bladeCode={`
+<button class="btn-base submit">submit</button>
+<button class="btn-base reset">reset</button>
+<button class="btn-base successful"><i class="fi fi-br-check mx-2"></i>succesful</button>
+<button class="btn-base delete"><i class="fi fi-br-trash-xmark mx-2"></i>delete</button>
+            `}
+        />
+      </CodeSection>
+    </div>
+  </main>
+</Layout>

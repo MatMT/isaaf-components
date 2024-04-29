@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeaderPage from "../../components/HeaderPage.astro";
+import CodeDisplay from "../../components/CodeDisplay.astro";
+
+const htmlExample = `
+<input type="text" id="disabled-input" aria-label="disabled input" class="mb-6 bg-gray-100 border ...">
+<input type="text" id="disabled-input-2" aria-label="disabled input 2" class="bg-gray-100 border ...">
+`;
+---
+
+<Layout title="Navegación">
+  <HeaderPage title="Componentes" titleColor="Navegación">
+    En esta página encontrarás una variedad de componentes para maquetar una
+    navegación web. Estos componentes te ayudarán a crear una interfaz de
+    usuario intuitiva y atractiva para tus usuarios.
+  </HeaderPage>
+
+  <main class="content">
+    <div class="flex flex-col gap-8">
+      <CodeDisplay
+        title="Buttons solid color"
+        description="Diferentes botones con colores sólidos para resaltar tipos de acciones."
+        htmlCode={htmlExample}
+      />
+
+      <CodeDisplay
+        title="Disabled State"
+        description="Get started with this example if you want to apply the disabled state to an input field."
+        htmlCode={htmlExample}
+      />
+
+      <CodeDisplay
+        title="Disabled State"
+        description="Get started with this example if you want to apply the disabled state to an input field."
+        htmlCode={htmlExample}
+      />
+    </div>
+  </main>
+</Layout>
