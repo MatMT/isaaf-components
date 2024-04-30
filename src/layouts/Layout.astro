@@ -17,7 +17,7 @@ const { title, navbar } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="./styles/isaaf.css" />
+    <link rel="stylesheet" href="/styles/isaaf.css" />
     <title>Componentes | {title}</title>
   </head>
   <body>
@@ -39,16 +39,16 @@ const { title, navbar } = Astro.props;
                     <NavElement href="/categorias/botones" title="Botones" />
 
                     <NavElement
-                      href="./categorias/contenedores"
+                      href="/categorias/contenedores"
                       title="Contenedores"
                     />
 
                     <NavElement
-                      href="./categorias/formularios"
+                      href="/categorias/formularios"
                       title="Formularios"
                     />
 
-                    <NavElement href="./categorias/tablas" title="Tablas" />
+                    <NavElement href="/categorias/tablas" title="Tablas" />
 
                     {/* <NavElement
                       href="/categorias/navegacion"
