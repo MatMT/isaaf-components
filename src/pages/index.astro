@@ -4,7 +4,7 @@ import Card from "../components/Card.astro";
 import HeaderPage from "../components/HeaderPage.astro";
 ---
 
-<Layout title="Isaaf">
+<Layout title="Isaaf" navbar={false}>
   <HeaderPage title="Isaaf" titleColor="Components">
     Visualiza, copia y pega <code>componentes</code> que faciliten la contrucción
     de un nuestro nuevo <strong>ISAAF</strong> de manera rápida, sencilla y atractiva
@@ -14,34 +14,34 @@ import HeaderPage from "../components/HeaderPage.astro";
   <main class="content">
     <ul role="list" class="link-card-grid">
       <Card
-        href="/categorias/botones"
+        href="./categorias/botones"
         title="Botones"
         body="Diferentes botones, colores estilos y formas"
       />
 
       <Card
-        href="/categorias/contenedores"
+        href="./categorias/contenedores"
         title="Contenedores"
         body="Cards, secciones, contenedores y más."
       />
 
       <Card
-        href="/categorias/formularios"
+        href="./categorias/formularios"
         title="Formularios"
         body="Formularios, inputs, selects, radios y más."
       />
 
       <Card
-        href="/categorias/tablas"
+        href="./categorias/tablas"
         title="Tablas"
         body="Tablas, listas, grillas y más."
       />
 
-      <Card
+      <!-- <Card
         href="/categorias/navegacion"
         title="Navbar"
         body="Menús, navegación, breadcrumbs y más."
-      />
+      /> -->
     </ul>
   </main>
 </Layout>

@@ -1,7 +1,6 @@
 ---
 // Recibe las propiedades del componente para el título, la descripción y el código HTML.
-const { id, description, descripHTMl, descripBlade, htmlCode, bladeCode } =
-  Astro.props;
+const { id, descripHTMl, descripBlade, htmlCode, bladeCode } = Astro.props;
 ---
 
 <div
@@ -18,7 +17,7 @@ const { id, description, descripHTMl, descripBlade, htmlCode, bladeCode } =
         class="p-2 bg-white rounded shadow flex items-center justify-center hover:bg-gray-50"
         id={`view-desktop-${id}`}
       >
-        <span class="material-icons">Escritorio</span>
+        <span class="material-icons">Visualizar</span>
       </button>
 
       <button
@@ -64,16 +63,16 @@ const { id, description, descripHTMl, descripBlade, htmlCode, bladeCode } =
   >
   </div>
 
+  <div
+    id={`divCode-${id}`}
+    class="text-sm hidden bg-gray-800 p-2 rounded overflow-auto"
+  >
+    <pre><code id={`code-${id}`} data-html={htmlCode} data-blade={bladeCode}>{htmlCode}</code></pre>
+  </div>
+
   <div id={`divPreview-${id}`}>
     <!-- Astro escapa HTML y lo imprime en el DOm -->
     <div set:html={htmlCode} />
-  </div>
-
-  <div
-    id={`divCode-${id}`}
-    class="hidden bg-gray-800 p-2 rounded overflow-auto"
-  >
-    <pre><code id={`code-${id}`} data-html={htmlCode} data-blade={bladeCode}>{htmlCode}</code></pre>
   </div>
 </div>
 
@@ -120,8 +119,6 @@ const { id, description, descripHTMl, descripBlade, htmlCode, bladeCode } =
           let codeElement = divCode.querySelector(`#code-${id}`);
 
           let descripHtml = document.getElementById(`desc-html-${id}`);
-
-          console.log(descripHtml.getAttribute("data-descriptBlade"));
 
           if (typeCode == "html") {
             codeElement.innerHTML = codeHtml;

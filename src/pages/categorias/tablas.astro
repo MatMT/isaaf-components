@@ -1,0 +1,58 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeaderPage from "../../components/HeaderPage.astro";
+import CodeDisplay from "../../components/CodeDisplay.astro";
+import CodeSection from "../../components/CodeSection.astro";
+---
+
+<Layout title="Navegación" navbar={true}>
+  <HeaderPage title="Componentes" titleColor="Tablas">
+    En esta página encontrarás el estilo predefinido de DataTables.
+  </HeaderPage>
+
+  <main class="content">
+    <div class="flex flex-col gap-8">
+      <CodeSection title="Botones Sólidos">
+        <CodeDisplay
+          id="solid-buttons"
+          descripHTMl="Estático  | <strong>btn-base ...</strong>"
+          descripBlade="Dinámico | <strong>name*</strong> | [subtmit, reset, successful, delete]"
+          htmlCode={`        <table class="dataTable my-4" id="example">
+            <thead>
+                <th>Data 1</th>
+                <th>Data 2</th>
+                <th>Data 3</th>
+                <th>Data 4</th>
+                <th>Data 5</th>
+
+            </thead>
+            <tbody class="text-gray-800">
+                <tr>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reiciendis? Sed soluta ullam atque cum ducimus ab corrupti porro omnis, nesciunt, sequi ipsum! Commodi atque amet distinctio consequatur maxime quo?</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reiciendis? Sed soluta ullam atque cum ducimus ab corrupti porro omnis, nesciunt, sequi ipsum! Commodi atque amet distinctio consequatur maxime quo?</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reiciendis? Sed soluta ullam atque cum ducimus ab corrupti porro omnis, nesciunt, sequi ipsum! Commodi atque amet distinctio consequatur maxime quo?</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reiciendis? Sed soluta ullam atque cum ducimus ab corrupti porro omnis, nesciunt, sequi ipsum! Commodi atque amet distinctio consequatur maxime quo?</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reiciendis? Sed soluta ullam atque cum ducimus ab corrupti porro omnis, nesciunt, sequi ipsum! Commodi atque amet distinctio consequatur maxime quo?</td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reiciendis? Sed soluta ullam atque cum ducimus ab corrupti porro omnis, nesciunt, sequi ipsum! Commodi atque amet distinctio consequatur maxime quo?</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reiciendis? Sed soluta ullam atque cum ducimus ab corrupti porro omnis, nesciunt, sequi ipsum! Commodi atque amet distinctio consequatur maxime quo?</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reiciendis? Sed soluta ullam atque cum ducimus ab corrupti porro omnis, nesciunt, sequi ipsum! Commodi atque amet distinctio consequatur maxime quo?</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reiciendis? Sed soluta ullam atque cum ducimus ab corrupti porro omnis, nesciunt, sequi ipsum! Commodi atque amet distinctio consequatur maxime quo?</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, reiciendis? Sed soluta ullam atque cum ducimus ab corrupti porro omnis, nesciunt, sequi ipsum! Commodi atque amet distinctio consequatur maxime quo?</td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                    <td>123</td>
+                </tr>
+            </tbody>
+        </table>`}
+          bladeCode={`Pendiente`}
+        />
+      </CodeSection>
+    </div>
+  </main>
+</Layout>

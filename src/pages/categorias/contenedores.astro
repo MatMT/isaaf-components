@@ -1,0 +1,108 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeaderPage from "../../components/HeaderPage.astro";
+import CodeDisplay from "../../components/CodeDisplay.astro";
+import CodeSection from "../../components/CodeSection.astro";
+---
+
+<Layout title="Navegación" navbar={true}>
+  <HeaderPage title="Componentes" titleColor="Contenedores">
+    En esta página encontrarás diferentes tipos de contenedores, flexibles y
+    responsivos.
+  </HeaderPage>
+
+  <main class="content">
+    <div class="flex flex-col gap-8">
+      <h2 class="text-center text-6xl uppercase font-bold">Grid</h2>
+      <CodeSection title="Normal">
+        <CodeDisplay
+          id="normal-container"
+          title="Text Inputs"
+          descripHTMl="Estático  | <strong>btn-base ...</strong>"
+          descripBlade="Dinámico | <strong>name*</strong> | [subtmit, reset, successful, delete]"
+          htmlCode={`<div class="grid grid-cols-1 gap-2 md__grid-cols-2 lg__grid-cols-3 xl__grid-cols-4">
+  <div class="box-1">
+    <h4 class="text-xl font-bold text-slate-800">Box-1</h4>
+    <p class="text-slate-500 leading-loose text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nesciunt doloremque veritatis, quasi reiciendis ab! Voluptas illum quas consectetur dolore laudantium quam, officiis provident quisquam accusantium libero consequuntur nostrum sit.</p>
+    <button class="btn-base successful w-auto">Confirmar</button>
+  </div>
+</div>`}
+          bladeCode={`Pendiente`}
+        />
+      </CodeSection>
+
+      <CodeSection title="Large Responsive">
+        <CodeDisplay
+          id="responsive-container"
+          descripHTMl="btn-base ...-line"
+          descripBlade=""
+          htmlCode={`<div class="grid grid-cols-1 gap-2 md__grid-cols-2 lg__grid-cols-3 xl__grid-cols-4">
+  <div class="box-2 lg__col-span-2">
+    <h4 class="text-xl font-bold text-slate-800">Box-2</h4>
+    <p class="text-slate-500 leading-loose text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nesciunt doloremque veritatis, quasi reiciendis ab! Voluptas illum quas consectetur dolore laudantium quam, officiis provident quisquam accusantium libero consequuntur nostrum sit.</p>
+    <button class="btn-base delete w-auto">Eliminar</button>
+  </div>
+</div>`}
+          bladeCode={`Pendiente`}
+        />
+      </CodeSection>
+
+      <CodeSection title="Middle Responsive">
+        <CodeDisplay
+          id="middleresponsive-container"
+          descripHTMl="btn-spc ...."
+          descripBlade=""
+          htmlCode={`<div class="grid grid-cols-1 gap-2 md__grid-cols-2 lg__grid-cols-3 xl__grid-cols-4">
+  <div class="box-3 md__col-span-2 xl__col-span-1 xl__row-span-2">
+    <h4 class="text-xl font-bold text-slate-800">Box-3</h4>
+    <p class="text-slate-500 leading-loose text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nesciunt doloremque veritatis, quasi reiciendis ab! Voluptas illum quas consectetur dolore laudantium quam, officiis provident quisquam accusantium libero consequuntur nostrum sit.</p>
+  </div>
+</div>`}
+          bladeCode={`Pendiente`}
+        />
+      </CodeSection>
+
+      <h2 class="text-center text-6xl uppercase font-bold">Flex</h2>
+
+      <CodeSection title="Botones Responsivos">
+        <CodeDisplay
+          id="responsive-buttons"
+          descripHTMl="btn-spc ...."
+          descripBlade=""
+          htmlCode={`<div class="flex w-full flex-wrap">
+  <div class="box-1 basis-1_2">
+    <h4 class="text-xl font-bold text-slate-800">Box-1</h4>
+    <p class="text-slate-500 leading-loose text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nesciunt doloremque veritatis, quasi reiciendis ab! Voluptas illum quas consectetur dolore laudantium quam, officiis provident quisquam accusantium libero consequuntur nostrum sit.</p>
+    <button class="btn-base successful w-auto">Confirmar</button>
+  </div>
+  <div class="box-2 basis-1_3">
+    <h4 class="text-xl font-bold text-slate-800">Box-2</h4>
+    <p class="text-slate-500 leading-loose text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nesciunt doloremque veritatis, quasi reiciendis ab! Voluptas illum quas consectetur .</p>
+    <button class="btn-base delete w-auto">Eliminar</button>
+  </div>
+</div>`}
+          bladeCode={`Pendiente`}
+        />
+      </CodeSection>
+
+      <CodeSection title="Botones Responsivos">
+        <CodeDisplay
+          id="responsive-buttons"
+          descripHTMl="btn-spc ...."
+          descripBlade=""
+          htmlCode={`<div class="flex w-full flex-wrap">
+  <div class="box-3 basis-1_3">
+    <h4 class="text-xl font-bold text-slate-800">Box-3</h4>
+    <p class="text-slate-500 leading-loose text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nesciunt doloremque veritatis, quasi reiciendis ab! Voluptas illum quas consectetur dolore laudantium quam.</p>
+  </div>
+  <div class="box-4 basis-1_3">
+    <h4 class="text-xl font-bold text-slate-800">Box-4</h4>
+    <p class="text-slate-500 leading-loose text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nesciunt doloremque veritatis, quasi reiciendis ab! Voluptas illum quas consectetur dolore laudantium quam.</p>
+  </div>
+</div>`}
+          bladeCode={`Pendiente`}
+        />
+      </CodeSection>
+    </div>
+  </main>
+</Layout>
