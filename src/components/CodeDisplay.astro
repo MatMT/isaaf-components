@@ -6,6 +6,7 @@ const { id, descripHTMl, descripBlade, htmlCode, bladeCode } = Astro.props;
 <div
   id={id}
   class="displayCode p-6 mx-auto bg-white rounded-xl shadow-md space-y-4"
+  style="overflow-x: auto; width: 100%;"
 >
   <!-- Container for the buttons -->
   <nav
@@ -21,10 +22,10 @@ const { id, descripHTMl, descripBlade, htmlCode, bladeCode } = Astro.props;
       </button>
 
       <button
-        class="hidden p-2 bg-white rounded shadow items-center justify-center hover:bg-gray-50"
+        class={`hidden p-2 bg-white rounded shadow items-center justify-center hover:bg-gray-50`}
         id="view-responsive"
       >
-        <span class="material-icons">Responsive</span>
+        <span class="material-icons">Script</span>
       </button>
     </div>
 
@@ -73,6 +74,11 @@ const { id, descripHTMl, descripBlade, htmlCode, bladeCode } = Astro.props;
   <div id={`divPreview-${id}`}>
     <!-- Astro escapa HTML y lo imprime en el DOm -->
     <div set:html={htmlCode} />
+    <script>
+      {
+        jsCode;
+      }
+    </script>
   </div>
 </div>
 
