@@ -99,28 +99,27 @@ if (tabs.length > 0) {
   tabs[0].click(); // Simula un clic en el primer tab
 }
 </script>`}
-          bladeCode={`<x-tabs.layout clases="gap-0 md:gap-2 md:grid-cols-3 grid-cols-1">
+          bladeCode={`<x-tabs.layout clases="md:grid-cols-3 grid-cols-1">
 
-    <x-slot name="nav">
-        <x-tabs.title :title="'Tab 1'" :name="'tab1'" />
-        <x-tabs.title :title="'Tab 2'" :name="'tab2'" />
-        <x-tabs.title :title="'Tab 3'" :name="'tab3'" />
-    </x-slot>
-          
-    <x-tabs.content name="tab1">
-        <p>Tab 1 cuerpo</p>
-    </x-tabs.content>
-          
-    <x-tabs.content name="tab2">
-        <p>Tab 2 cuerpo</p>
-    </x-tabs.content>
-          
-    <x-tabs.content name="tab3">
-        <p>Tab 3 cuerpo</p>
-    </x-tabs.content>
-          
-</x-tabs.layout>
-          `}
+  <x-slot name="nav">
+    <x-tabs.title :title="'Tab 1'" :name="'tab1'" />
+    <x-tabs.title :title="'Tab 2'" :name="'tab2'" />
+    <x-tabs.title :title="'Tab 3'" :name="'tab3'" />
+  </x-slot>
+        
+  <x-tabs.content name="tab1">
+    <p>Tab 1 cuerpo</p>
+  </x-tabs.content>
+        
+  <x-tabs.content name="tab2">
+    <p>Tab 2 cuerpo</p>
+  </x-tabs.content>
+        
+  <x-tabs.content name="tab3">
+    <p>Tab 3 cuerpo</p>
+  </x-tabs.content>
+        
+</x-tabs.layout>`}
         />
       </CodeSection>
     </div>
