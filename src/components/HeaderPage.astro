@@ -3,7 +3,9 @@ const { title, titleColor } = Astro.props;
 ---
 
 <header class="contentHeader">
-  <h1 class="uppercase flex flex-wrap items-center justify-center gap-4">
+  <h1
+    class="uppercase flex flex-wrap items-center justify-center gap-4 text-5xl md:text-6xl"
+  >
     {title}<span class="text-gradient inline">{titleColor}</span>
   </h1>
 

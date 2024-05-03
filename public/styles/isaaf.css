@@ -505,18 +505,23 @@
 }
 
 .gap-05 {
-  gap: 0.125rem; /* 2px */
+  gap: 0.125rem;
+  /* 2px */
 }
 
 .gap-1 {
-  gap: 0.25rem; /* 4px */
+  gap: 0.25rem;
+  /* 4px */
 }
+
 .gap-2 {
-  gap: 0.5rem; /* 8px */
+  gap: 0.5rem;
+  /* 8px */
 }
 
 .gap-4 {
-  gap: 1rem; /* 16px */
+  gap: 1rem;
+  /* 16px */
 }
 
 /* 
@@ -684,6 +689,14 @@
   justify-content: flex-end;
 }
 
+.justify-normal {
+  justify-content: normal;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
 /* 
 + ---------------------------- DISPLAY 
 +-------------------- FLEXBOX
@@ -726,8 +739,8 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE GRID TEMPLETE COLUMNS
-    */
+  +-------------------- RESPONSIVE GRID TEMPLETE COLUMNS
+  */
 
   .sm\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
@@ -762,31 +775,36 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE GAP
-    */
+  +-------------------- RESPONSIVE GAP
+  */
 
   .sm\:gap-0 {
     gap: 0px;
   }
 
   .sm\:gap-05 {
-    gap: 0.125rem; /* 2px */
+    gap: 0.125rem;
+    /* 2px */
   }
 
   .sm\:gap-1 {
-    gap: 0.25rem; /* 4px */
+    gap: 0.25rem;
+    /* 4px */
   }
+
   .sm\:gap-2 {
-    gap: 0.5rem; /* 8px */
+    gap: 0.5rem;
+    /* 8px */
   }
 
   .sm\:gap-4 {
-    gap: 1rem; /* 16px */
+    gap: 1rem;
+    /* 16px */
   }
 
   /* 
-    +-------------------- RESPONSIVE Grid Column Start / End
-    */
+  +-------------------- RESPONSIVE Grid Column Start / End
+  */
 
   .sm\:col-auto {
     grid-column: auto;
@@ -813,8 +831,8 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE Grid Row Start / End
-    */
+  +-------------------- RESPONSIVE Grid Row Start / End
+  */
 
   .sm\:row-auto {
     grid-row: auto;
@@ -838,6 +856,50 @@
 
   .sm\:row-span-5 {
     grid-row: span 5 / span 5;
+  }
+
+  /* 
++ ---------------------------- DISPLAY 
++-------------------- FLEXBOX
++-------------------- JUSTIFY CONTENT
+*/
+
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+
+  .sm\:justify-around {
+    justify-content: space-around;
+  }
+
+  .sm\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .sm\:justify-normal {
+    justify-content: normal;
+  }
+
+  .sm\:justify-start {
+    justify-content: flex-start;
+  }
+
+  /* 
++ ---------------------------- DISPLAY 
++-------------------- FLEXBOX
++-------------------- ALIGN ITEMS
+*/
+
+  .sm\:items-center {
+    align-items: center;
+  }
+
+  .sm\:items-end {
+    align-items: end;
   }
 }
 
@@ -863,8 +925,8 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE GRID TEMPLETE COLUMNS
-    */
+  +-------------------- RESPONSIVE GRID TEMPLETE COLUMNS
+  */
 
   .md\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
@@ -899,31 +961,36 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE GAP
-    */
+  +-------------------- RESPONSIVE GAP
+  */
 
   .md\:gap-0 {
     gap: 0px;
   }
 
   .md\:gap-05 {
-    gap: 0.125rem; /* 2px */
+    gap: 0.125rem;
+    /* 2px */
   }
 
   .md\:gap-1 {
-    gap: 0.25rem; /* 4px */
+    gap: 0.25rem;
+    /* 4px */
   }
+
   .md\:gap-2 {
-    gap: 0.5rem; /* 8px */
+    gap: 0.5rem;
+    /* 8px */
   }
 
   .md\:gap-4 {
-    gap: 1rem; /* 16px */
+    gap: 1rem;
+    /* 16px */
   }
 
   /* 
-    +-------------------- RESPONSIVE Grid Column Start / End
-    */
+  +-------------------- RESPONSIVE Grid Column Start / End
+  */
 
   .md\:col-auto {
     grid-column: auto;
@@ -950,8 +1017,8 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE Grid Row Start / End
-    */
+  +-------------------- RESPONSIVE Grid Row Start / End
+  */
   .md\:row-auto {
     grid-row: auto;
   }
@@ -974,6 +1041,50 @@
 
   .md\:row-span-5 {
     grid-row: span 5 / span 5;
+  }
+
+  /* 
++ ---------------------------- DISPLAY 
++-------------------- FLEXBOX
++-------------------- JUSTIFY CONTENT
+*/
+
+  .md\:justify-center {
+    justify-content: center;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
+  }
+
+  .md\:justify-around {
+    justify-content: space-around;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .md\:justify-normal {
+    justify-content: normal;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
+  /* 
++ ---------------------------- DISPLAY 
++-------------------- FLEXBOX
++-------------------- ALIGN ITEMS
+*/
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:items-end {
+    align-items: end;
   }
 }
 
@@ -999,8 +1110,8 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE GRID TEMPLETE COLUMNS
-    */
+  +-------------------- RESPONSIVE GRID TEMPLETE COLUMNS
+  */
 
   .lg\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
@@ -1035,31 +1146,36 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE GAP
-    */
+  +-------------------- RESPONSIVE GAP
+  */
 
   .lg\:gap-0 {
     gap: 0px;
   }
 
   .lg\:gap-05 {
-    gap: 0.125rem; /* 2px */
+    gap: 0.125rem;
+    /* 2px */
   }
 
   .lg\:gap-1 {
-    gap: 0.25rem; /* 4px */
+    gap: 0.25rem;
+    /* 4px */
   }
+
   .lg\:gap-2 {
-    gap: 0.5rem; /* 8px */
+    gap: 0.5rem;
+    /* 8px */
   }
 
   .lg\:gap-4 {
-    gap: 1rem; /* 16px */
+    gap: 1rem;
+    /* 16px */
   }
 
   /* 
-    +-------------------- RESPONSIVE Grid Column Start / End
-    */
+  +-------------------- RESPONSIVE Grid Column Start / End
+  */
 
   .lg\:col-auto {
     grid-column: auto;
@@ -1086,8 +1202,8 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE Grid Row Start / End
-    */
+  +-------------------- RESPONSIVE Grid Row Start / End
+  */
 
   .lg\:row-auto {
     grid-row: auto;
@@ -1111,6 +1227,50 @@
 
   .lg\:row-span-5 {
     grid-row: span 5 / span 5;
+  }
+
+  /* 
++ ---------------------------- DISPLAY 
++-------------------- FLEXBOX
++-------------------- JUSTIFY CONTENT
+*/
+
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
+  .lg\:justify-around {
+    justify-content: space-around;
+  }
+
+  .lg\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .lg\:justify-normal {
+    justify-content: normal;
+  }
+
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+
+  /* 
++ ---------------------------- DISPLAY 
++-------------------- FLEXBOX
++-------------------- ALIGN ITEMS
+*/
+
+  .lg\:items-center {
+    align-items: center;
+  }
+
+  .lg\:items-end {
+    align-items: end;
   }
 }
 
@@ -1136,8 +1296,8 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE GRID TEMPLETE COLUMNS
-    */
+  +-------------------- RESPONSIVE GRID TEMPLETE COLUMNS
+  */
 
   .xl\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
@@ -1172,31 +1332,36 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE GAP
-    */
+  +-------------------- RESPONSIVE GAP
+  */
 
   .xl\:gap-0 {
     gap: 0px;
   }
 
   .xl\:gap-05 {
-    gap: 0.125rem; /* 2px */
+    gap: 0.125rem;
+    /* 2px */
   }
 
   .xl\:gap-1 {
-    gap: 0.25rem; /* 4px */
+    gap: 0.25rem;
+    /* 4px */
   }
+
   .xl\:gap-2 {
-    gap: 0.5rem; /* 8px */
+    gap: 0.5rem;
+    /* 8px */
   }
 
   .xl\:gap-4 {
-    gap: 1rem; /* 16px */
+    gap: 1rem;
+    /* 16px */
   }
 
   /* 
-    +-------------------- RESPONSIVE Grid Column Start / End
-    */
+  +-------------------- RESPONSIVE Grid Column Start / End
+  */
 
   .xl\:col-auto {
     grid-column: auto;
@@ -1235,8 +1400,8 @@
   }
 
   /* 
-    +-------------------- RESPONSIVE Grid Row Start / End
-    */
+  +-------------------- RESPONSIVE Grid Row Start / End
+  */
 
   .xl\:row-auto {
     grid-row: auto;
@@ -1260,6 +1425,44 @@
 
   .xl\:row-span-5 {
     grid-row: span 5 / span 5;
+  }
+
+  .xl\:justify-center {
+    justify-content: center;
+  }
+
+  .xl\:justify-between {
+    justify-content: space-between;
+  }
+
+  .xl\:justify-around {
+    justify-content: space-around;
+  }
+
+  .xl\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .xl\:justify-normal {
+    justify-content: normal;
+  }
+
+  .xl\:justify-start {
+    justify-content: flex-start;
+  }
+
+  /* 
++ ---------------------------- DISPLAY 
++-------------------- FLEXBOX
++-------------------- ALIGN ITEMS
+*/
+
+  .xl\:items-center {
+    align-items: center;
+  }
+
+  .xl\:items-end {
+    align-items: end;
   }
 }
 /* CLASES PARA ELEMENTOS DEL FORMULARIO (INPUTS, SELECTS)*/
@@ -1407,28 +1610,28 @@ form .group-btn {
 /*
 
 .container-loyout input{
-    background-color: var(--gray-soft);
-    border: none;
-    outline: none;
-    border-radius: 0.375rem !important;
-    width: 100%;
+  background-color: var(--gray-soft);
+  border: none;
+  outline: none;
+  border-radius: 0.375rem !important;
+  width: 100%;
 }
 
 .container-loyout select{
-    background-color: var(--gray-soft);
-    border: none;
-    outline: none;
-    border-radius: 0.375rem !important;
-    width: 100%;
+  background-color: var(--gray-soft);
+  border: none;
+  outline: none;
+  border-radius: 0.375rem !important;
+  width: 100%;
 }
 
 .container-loyout input:focus{
-    background-color: var(--gray-soft) !important;
-    outline: none;
+  background-color: var(--gray-soft) !important;
+  outline: none;
 }
 .container-loyout select:focus{
-    background-color: var(--gray-soft) !important;
-    outline: none;
+  background-color: var(--gray-soft) !important;
+  outline: none;
 }
 
 */
@@ -1440,14 +1643,14 @@ form .group-btn {
 
 select {
   margin: 0.5rem 0rem !important;
-  background-color: var(--slate-100) !important ;
-  border: none !important;
-  outline: none !important;
+  background-color: var(--slate-100);
+  border: none;
+  outline: none;
   padding: 0.5rem !important;
   border-radius: 0.5rem !important;
   color: var(--slate-600) !important;
-  text-align: center !important;
-  font-size: small !important;
+  text-align: center;
+  font-size: small;
 }
 
 select:focus {
@@ -1486,7 +1689,7 @@ th,
 td,
 tr {
   /*font-size: 1rem; 16px 
-    line-height: 1.5rem;  24px */
+  line-height: 1.5rem;  24px */
   vertical-align: middle !important;
 }
 
@@ -2606,40 +2809,40 @@ table.dataTable {
 
 table.dataTable thead th,
 table.dataTable tfoot th {
-  color: var(--slate-400) !important;
-  font-size: 0.75rem !important;
+  color: var(--slate-400);
+  font-size: 0.75rem;
   text-align: center !important;
   border-bottom: 1px solid var(--gray-soft) !important;
-  padding: 1rem !important;
+  padding: 1rem;
 }
 
 table.dataTable thead th:active,
 table.dataTable thead td:active {
-  outline: none !important;
+  outline: none;
 }
 
 /* TABLES STYLES  TD */
 
 table.dataTable tbody td {
   text-align: center !important;
-  font-size: 0.875rem !important;
+  font-size: 0.875rem;
   border-bottom: 1px solid var(--gray-soft) !important;
-  padding: 1rem 0.25rem !important;
+  padding: 1rem 0.25rem;
 }
 
 table.dataTable tbody tr {
-  transition: all ease-in-out 300ms !important;
+  transition: all ease-in-out 300ms;
 }
 
 table.dataTable tbody tr:hover {
-  background-color: var(--slate-100) !important;
+  background-color: var(--slate-100);
 }
 
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
 table.dataTable thead .sorting_desc {
-  cursor: pointer !important;
-  cursor: hand !important;
+  cursor: pointer;
+  cursor: hand;
 }
 
 table.dataTable thead .sorting,
@@ -2647,13 +2850,13 @@ table.dataTable thead .sorting_asc,
 table.dataTable thead .sorting_desc,
 table.dataTable thead .sorting_asc_disabled,
 table.dataTable thead .sorting_desc_disabled {
-  background-repeat: no-repeat !important;
-  background-position: center right !important;
+  background-repeat: no-repeat;
+  background-position: center right;
 }
 
 table.dataTable.nowrap th,
 table.dataTable.nowrap td {
-  white-space: nowrap !important;
+  white-space: nowrap;
 }
 
 table.dataTable thead .sorting {
@@ -2682,7 +2885,7 @@ table.dataTable tbody td.accion-tabla.acciones {
 
 .dataTables_wrapper {
   /*display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;*/
+  grid-template-columns: 1fr 1fr 1fr 1fr;*/
   width: 100%;
   padding: 0.25rem;
   margin-top: 1.5rem;
@@ -2691,14 +2894,14 @@ table.dataTable tbody td.accion-tabla.acciones {
 /* LENGTH & FILTER */
 
 .dataTables_wrapper .dataTables_length {
-  color: var(--slate-600) !important;
+  color: var(--slate-600);
   display: flex;
   justify-content: end;
 }
 
 .dataTables_wrapper .dataTables_length select {
-  background-color: var(--slate-100) !important;
-  color: var(--gray-dark) !important;
+  background-color: var(--slate-100);
+  color: var(--gray-dark);
   border: none;
   outline: none;
   padding: 0.5rem;
@@ -2730,13 +2933,13 @@ table.dataTable tbody td.accion-tabla.acciones {
 
 .dataTables_wrapper .dataTables_filter label i {
   font-size: 0.85rem;
-  color: var(--primary-color) !important;
+  color: var(--primary-color);
   margin: 0% 0.5rem;
 }
 
 .dataTables_wrapper .dataTables_filter label input {
   width: 100%;
-  color: black !important;
+  color: black;
   font-size: 0.75rem !important;
   outline: none;
   border: none;
@@ -2751,12 +2954,12 @@ table.dataTable tbody td.accion-tabla.acciones {
 
 .dataTables_processing {
   /*margin-top: 4rem;
-    color: var(--slate-600);
-    text-align: center;
-    padding: 0.75rem;
-    width: 100%;
-    border-radius: 0.5rem;
-    background-color: var(--slate-100);*/
+  color: var(--slate-600);
+  text-align: center;
+  padding: 0.75rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--slate-100);*/
   display: none;
   opacity: 0;
 }
@@ -2772,16 +2975,19 @@ table.dataTable tbody td.accion-tabla.acciones {
 
 .dataTables_wrapper .dataTables_paginate {
   width: 100%;
-  display: block;
-  font-size: 0.85rem;
+  /* display: block; */
+  font-size: 0.65rem;
   height: 45px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .dataTables_wrapper .dataTables_paginate a {
   color: var(--gray-dark) !important;
   cursor: pointer;
   text-decoration: none;
-  margin: 0px 1rem;
+  /* margin: 0px 0.25rem; */
   transition: all ease-in-out 300ms;
   border-radius: 0.5rem !important;
   padding: 0.25rem 0.5rem;
@@ -2797,7 +3003,7 @@ table.dataTable tbody td.accion-tabla.acciones {
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
   background-color: var(--slate-200);
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   margin: 0%;
   border-radius: 0.5rem !important;
 }
@@ -2819,13 +3025,14 @@ table.dataTable tbody td.accion-tabla.acciones {
 
   .dataTables_wrapper .dataTables_info {
     display: inline-block;
-    width: 50%;
+    width: 30%;
   }
 
   .dataTables_wrapper .dataTables_paginate {
-    padding: 1rem;
+    /* padding: 1rem;*/
+    font-size: 0.85rem;
     display: inline-block;
-    width: 50%;
+    width: 70%;
     text-align: right;
   }
 }
@@ -5504,6 +5711,52 @@ table.dataTable tbody td.accion-tabla.acciones {
     padding-top: 1.25rem;
   }
 }
+/* 
++
++ ---------------------------- diseño tabs
++
+*/
+
+.tabs {
+  background-color: white !important;
+}
+
+.tab-base {
+  width: 100% !important;
+  /* height: 100%; */
+  border-radius: 0.5rem !important;
+  padding: 0.55rem 1.375rem !important;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #00314c;
+  line-height: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.tab-active {
+  background-color: #00314c;
+  color: white;
+}
+
+.tab-inactive {
+  color: #212529;
+  /* background-color: white; */
+}
+
+.tab-inactive:hover {
+  color: #212529;
+  background-color: #e2e6ea;
+}
+
 :root {
   --primary-color: #00314c;
   --second-color: #026390;
@@ -5733,9 +5986,9 @@ table.dataTable tbody td.accion-tabla.acciones {
 
 @media (min-width: 768px) {
   /* 
-    + --------------------------------- TEXT
-    +-------------------- TEXT-ALIGN
-    */
+  + --------------------------------- TEXT
+  +-------------------- TEXT-ALIGN
+  */
 
   .md\:text-center {
     text-align: center;
@@ -5750,9 +6003,9 @@ table.dataTable tbody td.accion-tabla.acciones {
   }
 
   /* 
-    + --------------------------------- TEXT
-    +-------------------- FONT SIZE 
-    */
+  + --------------------------------- TEXT
+  +-------------------- FONT SIZE 
+  */
 
   .md\:text-xs {
     font-size: 0.75rem; /* 12px */
@@ -5822,9 +6075,9 @@ table.dataTable tbody td.accion-tabla.acciones {
 
 @media screen and (min-width: 1024px) {
   /* 
-    + --------------------------------- TEXT
-    +-------------------- TEXT-ALIGN
-    */
+  + --------------------------------- TEXT
+  +-------------------- TEXT-ALIGN
+  */
 
   .lg\:text-center {
     text-align: center;
@@ -5839,9 +6092,9 @@ table.dataTable tbody td.accion-tabla.acciones {
   }
 
   /* 
-    + --------------------------------- TEXT
-    +-------------------- FONT SIZE 
-    */
+  + --------------------------------- TEXT
+  +-------------------- FONT SIZE 
+  */
 
   .lg\:text-xs {
     font-size: 0.75rem; /* 12px */
@@ -5911,9 +6164,9 @@ table.dataTable tbody td.accion-tabla.acciones {
 
 @media screen and (min-width: 1280px) {
   /* 
-    + --------------------------------- TEXT
-    +-------------------- TEXT-ALIGN
-    */
+  + --------------------------------- TEXT
+  +-------------------- TEXT-ALIGN
+  */
 
   .xl\:text-center {
     text-align: center;
@@ -5928,9 +6181,9 @@ table.dataTable tbody td.accion-tabla.acciones {
   }
 
   /* 
-    + --------------------------------- TEXT
-    +-------------------- FONT SIZE 
-    */
+  + --------------------------------- TEXT
+  +-------------------- FONT SIZE 
+  */
 
   .xl\:text-xs {
     font-size: 0.75rem; /* 12px */
